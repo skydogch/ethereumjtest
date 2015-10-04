@@ -1,17 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'spring-boot'
+
 buildscript {
     repositories {
         mavenCentral()
     }
 
-
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.2.RELEASE")
+      
     }
 }
-
-apply plugin: 'java'
-apply plugin: 'maven'
-apply plugin: 'spring-boot'
 
 repositories {
 
@@ -19,8 +20,16 @@ repositories {
     mavenCentral()
 
     maven {
-        url "http://dl.bintray.com/ethereum/maven"
+    	url "https://oss.jfrog.org/libs-snapshot/"
+    //    url "http://dl.bintray.com/ethereum/maven"
     }
+}
+
+eclipse {
+    classpath {
+        downloadJavadoc = true
+        downloadSources = true
+    } 
 }
 
 configurations.all {
@@ -33,14 +42,16 @@ dependencies {
 
 
     compile "com.google.guava:guava:18.0"
-    compile ("org.ethereum:ethereumj-core:1.0.0-RC1"){
+//  compile ("org.ethereum:ethereumj-core:1.0.0-RC1"){
+    compile ("org.ethereum:ethereumj-core:1.0.0-SNAPSHOT"){
 
         exclude group: "log4j"
         exclude group: "org.slf4j", module: "log4j-over-slf4j"
         exclude group: "org.slf4j", module: "slf4j-log4j12"
 
     }
-
+        
+   // compile "org.ethereum:ethereumj-core:1.0.0-SNAPSHOT"
 }
 
 sourceSets {
@@ -60,8 +71,7 @@ task stage {
 }
 
 
-//    jvmArgs = ["-server", "-Xms3g", "-Dethereumj.conf.file=/home/cloudhorse/eclipse_workspace/FS0003/Dethereumj.conf"]
-
 bootRun {
-    jvmArgs = ["-server", "-Xms3g", "-Dethereumj.conf.file=/home/cloudhorse/eclipse_workspace/FS0003/Dethereumj.conf"]
+    jvmArgs = ["-server", "-Xms3g", "-Dethereumj.conf.file=/home/cloudhorse/gitRep001/FS0003/ethereumj.conf", 
+    "-Dlogback.configurationFile=/home/cloudhorse/gitRep001/FS0003/logback.xml"]
 }
