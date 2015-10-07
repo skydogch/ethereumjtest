@@ -1,0 +1,220 @@
+381   INFO  general - Running frontier.json,  core version: 1.0.0-SNAPSHOT
+434   INFO  general - git.hash: [105d8b3]
+434   INFO  general - build.time: [GMT]-[21/Sep/2015]-[03:32]
+434   INFO  general - 
+435   INFO  general - Database reset done
+438   INFO  general - capability eth version: [60, 61]
+441   INFO  general - capability shh version: [2]
+442   INFO  general - capability bzz version: [0]
+561   INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@64f6106c: startup date [Tue Oct 06 05:03:56 CEST 2015]; root of context hierarchy
+1041  INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'blockStore': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=remoteConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/ethereum/config/RemoteConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=defaultConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in org.ethereum.config.DefaultConfig]
+1314  INFO  general - In memory 'pendingTransactions' storage created.
+1331  INFO  general - leveldb key-value data source created.
+1335  INFO  general - leveldb key-value data source created.
+1799  INFO  general - External IP wasn't set, using checkip.amazonaws.com to identify it...
+2216  INFO  general - External address identified: 158.181.107.145
+2272  INFO  general - DB is empty - adding Genesis
+4616  INFO  general - Genesis block loaded
+4618  INFO  blockqueue - Start loading sync queue
+4622  INFO  sync - Sync Manager: ON
+4624  INFO  general - Bind address wasn't set, Punching to identify it...
+4645  INFO  net - Listening for incoming connections, port: [30303] 
+4649  INFO  net - NodeId: [fe3fd3bfd5595ea43605cdd896b6eed514322018b4c241ce4a206da8d23ec95e15daeff131c2e65434b14034645911d65ab34c1e9155c1febaef702b9cc0f0f4] 
+4662  INFO  blockqueue - Hash store loaded, size [0]
+4668  INFO  general - UDP local bound to: 192.168.1.38
+4671  INFO  blockqueue - Block queue loaded, size [0]
+4673  INFO  discover - Discovery UDPListener started
+4676  INFO  sync - Changing state from IDLE to HASH_RETRIEVING
+4678  INFO  sync - 
+
+4678  INFO  sync - State HASH_RETRIEVING
+
+4679  INFO  general - Connecting to the block store
+4688  INFO  o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.h2.Driver
+4698  INFO  general - Ethereum listener added
+4716  ERROR discover - Channel error
+java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143) ~[na:1.8.0_45-internal]
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:224) ~[na:1.8.0_45-internal]
+	at org.ethereum.net.rlpx.discover.NodeManager.getKey(NodeManager.java:183) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.getNodeHandler(NodeManager.java:193) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.channelActivated(NodeManager.java:127) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.MessageHandler.channelActive(MessageHandler.java:36) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelActive(ChannelInboundHandlerAdapter.java:64) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:817) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$2.run(AbstractChannel.java:496) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:356) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:110) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45-internal]
+4717  WARN  discover - UDP channel closed. Recreating after 5 sec pause...
+491   INFO  general - Running frontier.json,  core version: 1.0.0-SNAPSHOT
+495   INFO  general - git.hash: [105d8b3]
+496   INFO  general - build.time: [GMT]-[21/Sep/2015]-[03:32]
+496   INFO  general - 
+497   INFO  general - Database reset done
+498   INFO  general - capability eth version: [60, 61]
+499   INFO  general - capability shh version: [2]
+500   INFO  general - capability bzz version: [0]
+658   INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@64f6106c: startup date [Tue Oct 06 05:08:12 CEST 2015]; root of context hierarchy
+1243  INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'blockStore': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=remoteConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/ethereum/config/RemoteConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=defaultConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in org.ethereum.config.DefaultConfig]
+1585  INFO  general - In memory 'pendingTransactions' storage created.
+1603  INFO  general - leveldb key-value data source created.
+1606  INFO  general - leveldb key-value data source created.
+2206  INFO  general - External IP wasn't set, using checkip.amazonaws.com to identify it...
+2661  INFO  general - External address identified: 158.181.107.145
+2716  INFO  general - DB is empty - adding Genesis
+5581  INFO  general - Genesis block loaded
+5583  INFO  blockqueue - Start loading sync queue
+5589  INFO  general - Bind address wasn't set, Punching to identify it...
+5590  INFO  sync - Sync Manager: ON
+5622  INFO  general - UDP local bound to: 192.168.1.38
+5626  INFO  blockqueue - Block queue loaded, size [0]
+5632  INFO  blockqueue - Hash store loaded, size [0]
+5632  INFO  discover - Discovery UDPListener started
+5635  INFO  sync - Changing state from IDLE to HASH_RETRIEVING
+5637  INFO  general - Connecting to the block store
+5649  INFO  sync - 
+
+5650  INFO  sync - State HASH_RETRIEVING
+
+5651  INFO  o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.h2.Driver
+5656  INFO  net - Listening for incoming connections, port: [30303] 
+5660  INFO  net - NodeId: [fe3fd3bfd5595ea43605cdd896b6eed514322018b4c241ce4a206da8d23ec95e15daeff131c2e65434b14034645911d65ab34c1e9155c1febaef702b9cc0f0f4] 
+5679  INFO  general - Ethereum listener added
+5737  ERROR discover - Channel error
+java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143) ~[na:1.8.0_45-internal]
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:224) ~[na:1.8.0_45-internal]
+	at org.ethereum.net.rlpx.discover.NodeManager.getKey(NodeManager.java:183) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.getNodeHandler(NodeManager.java:193) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.channelActivated(NodeManager.java:127) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.MessageHandler.channelActive(MessageHandler.java:36) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelActive(ChannelInboundHandlerAdapter.java:64) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:817) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$2.run(AbstractChannel.java:496) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:356) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:110) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45-internal]
+5739  WARN  discover - UDP channel closed. Recreating after 5 sec pause...
+459   INFO  general - Running frontier.json,  core version: 1.0.0-SNAPSHOT
+465   INFO  general - git.hash: [105d8b3]
+466   INFO  general - build.time: [GMT]-[21/Sep/2015]-[03:32]
+466   INFO  general - 
+469   INFO  general - Database reset done
+471   INFO  general - capability eth version: [60, 61]
+471   INFO  general - capability shh version: [2]
+472   INFO  general - capability bzz version: [0]
+594   INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@64f6106c: startup date [Tue Oct 06 05:54:36 CEST 2015]; root of context hierarchy
+1064  INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'blockStore': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=remoteConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/ethereum/config/RemoteConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=defaultConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in org.ethereum.config.DefaultConfig]
+1394  INFO  general - In memory 'pendingTransactions' storage created.
+1408  INFO  general - leveldb key-value data source created.
+1410  INFO  general - leveldb key-value data source created.
+1871  INFO  general - External IP wasn't set, using checkip.amazonaws.com to identify it...
+2383  INFO  general - External address identified: 158.181.107.145
+2442  INFO  general - DB is empty - adding Genesis
+11682 INFO  general - Genesis block loaded
+11683 INFO  blockqueue - Start loading sync queue
+11688 INFO  general - Bind address wasn't set, Punching to identify it...
+11694 INFO  sync - Sync Manager: ON
+11713 INFO  blockqueue - Hash store loaded, size [0]
+11718 INFO  general - UDP local bound to: 192.168.1.38
+11722 INFO  discover - Discovery UDPListener started
+11726 INFO  blockqueue - Block queue loaded, size [0]
+11727 INFO  sync - Changing state from IDLE to HASH_RETRIEVING
+11730 INFO  sync - 
+
+11731 INFO  sync - State HASH_RETRIEVING
+
+11731 INFO  general - Connecting to the block store
+11738 INFO  o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.h2.Driver
+11755 INFO  general - Ethereum listener added
+11756 INFO  net - Listening for incoming connections, port: [30303] 
+11761 INFO  net - NodeId: [fe3fd3bfd5595ea43605cdd896b6eed514322018b4c241ce4a206da8d23ec95e15daeff131c2e65434b14034645911d65ab34c1e9155c1febaef702b9cc0f0f4] 
+11811 ERROR discover - Channel error
+java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143) ~[na:1.8.0_45-internal]
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:224) ~[na:1.8.0_45-internal]
+	at org.ethereum.net.rlpx.discover.NodeManager.getKey(NodeManager.java:183) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.getNodeHandler(NodeManager.java:193) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.channelActivated(NodeManager.java:127) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.MessageHandler.channelActive(MessageHandler.java:36) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelActive(ChannelInboundHandlerAdapter.java:64) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:817) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$2.run(AbstractChannel.java:496) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:356) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:110) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45-internal]
+11813 WARN  discover - UDP channel closed. Recreating after 5 sec pause...
+405   INFO  general - Running frontier.json,  core version: 1.0.0-SNAPSHOT
+411   INFO  general - git.hash: [105d8b3]
+411   INFO  general - build.time: [GMT]-[21/Sep/2015]-[03:32]
+411   INFO  general - 
+412   INFO  general - Database reset done
+413   INFO  general - capability eth version: [60, 61]
+414   INFO  general - capability shh version: [2]
+414   INFO  general - capability bzz version: [0]
+534   INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@64f6106c: startup date [Tue Oct 06 05:56:08 CEST 2015]; root of context hierarchy
+960   INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'blockStore': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=remoteConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/ethereum/config/RemoteConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=defaultConfig; factoryMethodName=blockStore; initMethodName=null; destroyMethodName=(inferred); defined in org.ethereum.config.DefaultConfig]
+1291  INFO  general - In memory 'pendingTransactions' storage created.
+1300  INFO  general - leveldb key-value data source created.
+1305  INFO  general - leveldb key-value data source created.
+1789  INFO  general - External IP wasn't set, using checkip.amazonaws.com to identify it...
+2241  INFO  general - External address identified: 158.181.107.145
+2292  INFO  general - DB is empty - adding Genesis
+4471  INFO  general - Genesis block loaded
+4472  INFO  blockqueue - Start loading sync queue
+4476  INFO  general - Bind address wasn't set, Punching to identify it...
+4483  INFO  sync - Sync Manager: ON
+4504  INFO  general - UDP local bound to: 192.168.1.38
+4506  INFO  discover - Discovery UDPListener started
+4510  INFO  general - Connecting to the block store
+4515  INFO  o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.h2.Driver
+4515  INFO  blockqueue - Block queue loaded, size [0]
+4516  INFO  sync - Changing state from IDLE to HASH_RETRIEVING
+4525  INFO  sync - 
+
+4530  INFO  general - Ethereum listener added
+4531  INFO  sync - State HASH_RETRIEVING
+
+4531  INFO  blockqueue - Hash store loaded, size [0]
+4543  INFO  net - Listening for incoming connections, port: [30303] 
+4547  INFO  net - NodeId: [fe3fd3bfd5595ea43605cdd896b6eed514322018b4c241ce4a206da8d23ec95e15daeff131c2e65434b14034645911d65ab34c1e9155c1febaef702b9cc0f0f4] 
+4588  ERROR discover - Channel error
+java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143) ~[na:1.8.0_45-internal]
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:224) ~[na:1.8.0_45-internal]
+	at org.ethereum.net.rlpx.discover.NodeManager.getKey(NodeManager.java:183) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.getNodeHandler(NodeManager.java:193) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.NodeManager.channelActivated(NodeManager.java:127) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at org.ethereum.net.rlpx.discover.MessageHandler.channelActive(MessageHandler.java:36) ~[ethereumj-core-1.0.0-SNAPSHOT.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelActive(ChannelInboundHandlerAdapter.java:64) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:183) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:169) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:817) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$2.run(AbstractChannel.java:496) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:356) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:110) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137) [netty-all-4.0.30.Final.jar:4.0.30.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45-internal]
+4597  WARN  discover - UDP channel closed. Recreating after 5 sec pause...
