@@ -15,7 +15,7 @@ public class FsBp001 {
 
 	public void myMessage() {
 		
-		System.out.println("It prints correctly the message!!");
+		//System.out.println("It prints correctly the message!!");
 		
 		
 	}

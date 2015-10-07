@@ -44,7 +44,7 @@ dependencies {
     compile "com.google.guava:guava:18.0"
 //  compile ("org.ethereum:ethereumj-core:1.0.0-RC1"){
     compile ("org.ethereum:ethereumj-core:1.0.0-SNAPSHOT"){
-
+		changing=true
         exclude group: "log4j"
         exclude group: "org.slf4j", module: "log4j-over-slf4j"
         exclude group: "org.slf4j", module: "slf4j-log4j12"
@@ -72,6 +72,7 @@ task stage {
 
 
 bootRun {
-    jvmArgs = ["-server", "-Xms3g", "-Dethereumj.conf.file=/home/cloudhorse/gitRep001/FS0003/ethereumj.conf", 
+    jvmArgs = ["-server", "-Xms3g", "-Dtest.debug",  
+    "-Dethereumj.conf.file=/home/cloudhorse/gitRep001/FS0003/ethereumj.conf", 
     "-Dlogback.configurationFile=/home/cloudhorse/gitRep001/FS0003/logback.xml"]
 }
